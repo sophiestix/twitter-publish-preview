@@ -1,0 +1,71 @@
+<span ng-if="vm.content.pictures.length <= 1">
+    <div ng-if="vm.previewMode == 'desktop'">
+        <div
+            class="preview-twitter--media eyas-mb10"
+            style="display: inline-block;"
+            ng-class="{'preview-is-collapsed': !vm.expandImageTwitter}"
+        >
+            <editor-preview-twitter-picture
+                url="{{vm.content.pictures[0].url}}">
+            </editor-preview-twitter-picture>
+        </div>
+    </div>
+    <div
+        ng-if="vm.previewMode == 'mobile' "
+        class="preview-twitter--media eyas-mb10 eyas-image-cover"
+        ng-class="{'preview-is-collapsed': !vm.expandImageTwitter}"
+        ng-style="{'background-image':' url({{vm.content.pictures[0].url}}) '}"
+    >
+    </div>
+</span>
+<span ng-if="vm.content.pictures.length > 1">
+    <div ng-if="vm.previewMode == 'desktop'">
+        <div
+            class="preview-twitter--media eyas-mb10 transition-fast"
+            ng-class="{ 'preview-is-collapsed' : vm.expandImageTwitter && vm.previewMode == 'desktop' }"
+        >
+            <div
+                class="eyas-gallery eyas-gallery--col preview-twitter--album"
+                ng-class="{
+                 'eyas-gallery--4': vm.content.pictures.length >= 4,
+                 'eyas-gallery--3': vm.content.pictures.length === 3,
+                 'eyas-gallery--2': vm.content.pictures.length === 2,
+                 'eyas-gallery--1': vm.content.pictures.length === 1
+            }"
+            >
+                <div
+                    ng-repeat="picture in vm.content.pictures"
+                    class="eyas-gallery__item eyas-gallery__item{{($index + 1)}}"
+                    ng-style="{'background-image': 'url(' + picture.url + ')' }"
+                >
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div ng-if="vm.previewMode == 'mobile'">
+        <div
+            class="preview-twitter--media eyas-mb10 transition-fast"
+            ng-class="{ 'preview-is-collapsed' : vm.expandImageTwitter && vm.previewMode == 'mobile' }"
+        >
+            <div
+                class="eyas-gallery eyas-gallery--col preview-twitter--album"
+                ng-class="{
+                 'eyas-gallery--4_mobile': vm.content.pictures.length >= 4,
+                 'eyas-gallery--3': vm.content.pictures.length === 3,
+                 'eyas-gallery--2': vm.content.pictures.length === 2,
+                 'eyas-gallery--1': vm.content.pictures.length === 1
+            }"
+            >
+                <div
+                    ng-repeat="picture in vm.content.pictures"
+                    class="eyas-gallery__item eyas-gallery__item{{($index + 1)}}"
+                    ng-style="{'background-image': 'url(' + picture.url + ')' }"
+                >
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</span>

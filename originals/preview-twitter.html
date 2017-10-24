@@ -1,0 +1,77 @@
+<div class="preview-twitter"
+ng-class="{'preview-twitter--mobile': vm.previewMode == 'mobile'}"
+
+    editor-post-tracker-minion>
+    <div class="preview-twitter__main">
+        <div class="preview-twitter__image">
+            <img class="preview-twitter--avatar" ng-src="{{ vm.avatar }}">
+        </div>
+        <div class="preview-twitter__content">
+            <div class="eyas-row eyas-collapse">
+                <a class="preview-twitter--name"
+                    target="_blank"
+                    ng-href="{{vm.channelLink}}"
+                    ng-click="tracker.track('view-channel', {triggeredFrom: 'new'})">
+                    <span ng-bind="vm.channels[0].name"></span>
+                </a>
+                <ul class="eyas-list eyas-list--inline preview-twitter--date">
+                    <li class="eyas-list-item">
+                        <span class="">@{{ vm.channels[0].profileName }}</span>
+                    </li>
+                    <li class="eyas-list-item">
+                        <span>·</span>
+                        <a class="preview-twitter--date"
+                            ng-bind="vm.postDate | listDisplayDate"
+                            target="_blank"
+                            ng-href="{{ vm.model.linkToNetwork || '#' }}"
+                        ></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="eyas-row eyas-collapse">
+                <div class="eyas-large-12 eyas-columns transitions">
+                    <div
+                        class="preview-twitter--tweet eyas-mb10"
+                        ng-class="{'eyas-rtl': vm.isLanguageRTL}"
+                    >
+                        <p ng-bind-html="vm.transformedMessage | trustAsHtml"></p>
+                    </div>
+                    <div ng-show="vm.postType == 'pictures' || vm.postType == 'photo' && vm.previewMode == 'desktop'"
+                        ng-include="'/app/publishing/editor/preview/twitter/preview-twitter-pictures.html'">
+                    </div>
+                    <div ng-if="vm.postType == 'video'" class="eyas-mb10">
+                        <video-preview video-src="vm.content.url"></video-preview>
+                    </div>
+                </div>
+            </div>
+            <div class="preview-twitter--footer desktop" ng-if="vm.previewMode == 'desktop'">
+                <span class="preview-twitter--actions eyas-mr10">
+                    <span class="eyas-icon-reply"></span>
+                </span>
+                <span class="preview-twitter--actions eyas-mr10">
+                    <span class="eyas-icon-retweet"></span>
+                </span>
+                <span class="preview-twitter--actions eyas-mr10">
+                    <span class="eyas-icon-heart"></span>
+                </span>
+                <span class="preview-twitter--actions eyas-mr10">
+                    <span class="eyas-icon-bars"></span>
+                </span>
+                <span class="preview-twitter--actions">
+                    <span class="eyas-icon-ellipsis"></span>
+                </span>
+            </div>
+            <div class="preview-twitter--footer" ng-if="vm.previewMode == 'mobile'">
+                <span class="preview-twitter--actions eyas-mr10">
+                    <span class="eyas-icon-reply eyas-mr30"></span>
+                </span>
+                <span class="preview-twitter--actions eyas-mr10">
+                    <span class="eyas-icon-retweet eyas-mr30"></span>
+                </span>
+                <span class="preview-twitter--actions eyas-mr10">
+                    <span class="eyas-icon-heart"></span>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,9 @@
+<div ng-if="vm.isReady" 
+    class="preview-twitter--image">
+    <img ng-src="{{vm.url}}" 
+        alt=""
+        ng-style="{
+            'margin-top': (-vm.heightCenterCrop) + 'px'
+        }"
+        />
+</div>
