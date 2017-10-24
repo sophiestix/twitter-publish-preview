@@ -1,0 +1,24 @@
+$font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+
+body {
+    // font-family: $font-family;
+}
+
+h1, h2 {
+    font-family: $font-family;
+}
+
+h1 {
+    font-size: 2em;
+    color: #39464E;
+}
+
+h2 {
+    font-size: 1.25em;
+    color: #8FA3B0;
+    font-weight: 400;
+}
+
+.preview-box {
+    margin: 50px;
+}
