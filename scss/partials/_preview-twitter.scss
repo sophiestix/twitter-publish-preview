@@ -3,7 +3,7 @@ $twitter-width-mobile: 300px;
 $twitter-padding: 9px 12px;
 $twitter-padding-mobile: 10px;
 $twitter-font: 'Helvetica Neue', Roboto, "Segoe UI", Calibri, sans-serif;
-$twitter-blue: rgb(0, 132, 180);
+$twitter-blue: #1DA1F2;
 $twitter-grey: #aab8c2;
 $twitter-grey-dark: lighten(#495B66,20%);
 $twitter-body-color: #14171a;
@@ -199,5 +199,16 @@ $twitter-body-color: #14171a;
             width: 420px;
             border-radius: 5px;
         }
+    }
+}
+
+.preview-twitter--actions {
+    cursor: pointer;
+    width: 15%;
+    display: inline-block;
+
+    & img:hover {
+        cursor: inherit;
+        stroke: $twitter-blue;
     }
 }

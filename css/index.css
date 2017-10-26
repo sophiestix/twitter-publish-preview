@@ -125,4 +125,12 @@ h2 {
       width: 420px;
       border-radius: 5px; }
 
+.preview-twitter--actions {
+  cursor: pointer;
+  width: 15%;
+  display: inline-block; }
+  .preview-twitter--actions img:hover {
+    cursor: inherit;
+    stroke: #1DA1F2; }
+
 /*# sourceMappingURL=index.css.map */

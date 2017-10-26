@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="45px" height="41px" viewBox="0 0 45 41" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Twitter Direct Message icon.</title>
+    <desc>Twitter Direct Message icon</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="DM" stroke="#657786" stroke-width="3">
+            <rect id="Rectangle-6" x="1.5" y="1.5" width="42" height="38" rx="7"></rect>
+            <path d="M42.5,9.00468307 C30.6306778,16.7426791 24.4640111,20.7411181 24,21 C22.9934206,21.5907415 22.0012597,21.6083664 21,21 C14.2957636,17.2595609 8.12909691,13.2611219 2.5,9.00468307" id="Line-Copy-3" stroke-linecap="round" stroke-linejoin="round" transform="translate(22.500000, 15.227186) scale(-1, 1) translate(-22.500000, -15.227186) "></path>
+        </g>
+    </g>
+</svg>
