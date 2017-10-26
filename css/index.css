@@ -21,9 +21,11 @@ h2 {
   padding: 9px 12px;
   margin: 0 auto;
   font-size: 14px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", Roboto, "Segoe UI", Calibri, sans-serif;
   line-height: 20px;
   color: #14171a;
+  text-align: start;
+  text-size-adjust: 100%;
   border-bottom: 1px solid #e6ecf0; }
   .preview-twitter:hover {
     background-color: #f5f8fa; }
@@ -33,7 +35,7 @@ h2 {
     padding: 10px;
     margin: 0 auto;
     font-size: 12px;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Helvetica Neue", Roboto, "Segoe UI", Calibri, sans-serif;
     line-height: 14px;
     color: #14171a; }
 
@@ -109,15 +111,18 @@ h2 {
   word-break: normal; }
 
 .preview-twitter--media {
-  margin-top: 10px;
   border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  margin: 10px 0;
   overflow: hidden;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  width: 504px;
-  transition: height .5s; }
-  .preview-twitter--media img {
-    object-fit: cover; }
+  line-height: 0px; }
+  .preview-twitter--media .preview-twitter--image {
+    transition: height .5s; }
+    .preview-twitter--media .preview-twitter--image img {
+      width: 420px;
+      border-radius: 5px; }
 
-/*# sourceMappingURL=preview-twitter.css.map */
+/*# sourceMappingURL=index.css.map */

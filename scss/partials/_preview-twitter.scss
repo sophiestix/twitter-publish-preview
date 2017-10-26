@@ -1,11 +1,8 @@
-@import 'partials/_core-styles';
-
-
 $twitter-width: 504px;
 $twitter-width-mobile: 300px;
 $twitter-padding: 9px 12px;
 $twitter-padding-mobile: 10px;
-$twitter-font: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$twitter-font: 'Helvetica Neue', Roboto, "Segoe UI", Calibri, sans-serif;
 $twitter-blue: rgb(0, 132, 180);
 $twitter-grey: #aab8c2;
 $twitter-grey-dark: lighten(#495B66,20%);
@@ -45,6 +42,8 @@ $twitter-body-color: #14171a;
         font-family: $twitter-font;
         line-height: 20px;
         color: $twitter-body-color;
+        text-align: start;
+        text-size-adjust: 100%;
     } @elseif ($size == 'mobile') {
         font-size: 12px;
         font-family: $twitter-font;
@@ -173,24 +172,32 @@ $twitter-body-color: #14171a;
 }
 
 .preview-twitter--media {
-    margin-top: 10px;
+    // margin-top: 10px;
+    // border-radius: 5px;
+    // overflow: hidden;
+    // background-position: center;
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    // width: 504px;
+    // transition: height .5s;
+
     border-radius: 5px;
+    border: 1px solid rgba(0,0,0,0.1);
+    margin: 10px 0;
     overflow: hidden;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    width: 504px;
-    transition: height .5s;
+    line-height: 0px;
 
-    img {
-        object-fit: cover;
+    .preview-twitter--image {
+        // max-height: 504px;
+        // max-width: 504px;
+        transition: height .5s;
+
+        img {
+            width: 420px;
+            border-radius: 5px;
+        }
     }
-
-    // .preview-twitter--image {
-        
-    //     img {
-    //         width: 420px;
-            
-    //     }
-    // }
 }
