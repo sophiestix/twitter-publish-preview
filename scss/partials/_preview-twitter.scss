@@ -7,6 +7,7 @@ $twitter-blue: #1DA1F2;
 $twitter-grey: #aab8c2;
 $twitter-grey-dark: lighten(#495B66,20%);
 $twitter-body-color: #14171a;
+$gallery-gutter: 5px;
 
 @mixin clearfix-micro {
     &:before,
@@ -44,11 +45,13 @@ $twitter-body-color: #14171a;
         color: $twitter-body-color;
         text-align: start;
         text-size-adjust: 100%;
+        -webkit-font-smoothing: antialiased;
     } @elseif ($size == 'mobile') {
         font-size: 12px;
         font-family: $twitter-font;
         line-height: 14px;
         color: $twitter-body-color;
+        -webkit-font-smoothing: antialiased;
     } @else {
         @warn ('Specify font size');
     }
@@ -172,35 +175,202 @@ $twitter-body-color: #14171a;
 }
 
 .preview-twitter--media {
-    // margin-top: 10px;
-    // border-radius: 5px;
-    // overflow: hidden;
-    // background-position: center;
-    // background-repeat: no-repeat;
-    // background-size: cover;
-    // width: 504px;
-    // transition: height .5s;
-
     border-radius: 5px;
     border: 1px solid rgba(0,0,0,0.1);
     margin: 10px 0;
     overflow: hidden;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    line-height: 0px;
+    line-height: 0;
 
-    .preview-twitter--image {
-        // max-height: 504px;
-        // max-width: 504px;
+    .twitter-album {
+        max-height: 504px;
+        max-width: 504px;
         transition: height .5s;
 
-        img {
-            width: 420px;
-            border-radius: 5px;
+        .twitter-gallery {
+
+            .twitter-gallery__item {
+                width: 100%;
+                height: 200px;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                display: inline-block;
+                &:first-child {
+                    margin-right: 1px;
+                }
+            }
+
+            &--1 {
+                .twitter-gallery__item1 {
+                    width: 420px;
+                    height: auto;
+                }
+            }
+
+            &--2 {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+            }
+
+            &--3 {
+                display: flex;
+                height: 280px;
+                vertical-align: top;
+                position: relative;
+
+                .twitter-gallery {
+                    position: relative;
+                    height: 100%;
+                    width: 100%;
+                    
+                    &__item {
+                        position: absolute;
+                        margin: 1px;
+                    }
+                    &__item1 {
+                        height: 100%;
+                        width: 66.7%;
+                        top: 0;
+                        bottom: 0;
+                        margin-top: 0;
+                        margin-bottom: 0;
+                        margin-left: 0;
+                    }
+
+                    &__item2 {
+                        top: 0;
+                        bottom: 50%;
+                        right: 0;
+                        margin-top: 0;
+                        margin-right: 0;
+                        width: calc(100% / 3 - 1px);
+                        height: 50%;
+                    }
+
+                    &__item3 {
+                        // width: 33.3%;
+                        // position: absolute;
+                        // top: -41px;
+                        top: 50%;
+                        bottom: 0;
+                        // left: 50%;
+                        right: 0;
+                        margin-bottom: 0;
+                        margin-right: 0;
+                        width: calc(100% /3 - 1px);
+                        height: 50%;
+                    }
+                    
+                }
+
+                // -webkit-column-count: 2;
+                // -moz-column-count: 2;
+                // column-count: 2;
+                // -webkit-column-gap: 80px;
+                // -moz-column-gap: 80px;
+                // column-gap: 80px;
+                // margin-right: -80px;
+                
+
+                // & > div:nth-child(n+2) {
+                //     margin-top: 1px;
+                // }
+
+                // .twitter-gallery {
+                //     &__item1 {
+                //         height: 337px;
+                //         width: 66.7%;
+                //     }
+    
+                //     &__item2 {
+                //         height: 100;
+                //         width: 100%;
+                //     }
+    
+                //     &__item3 {
+                //         height: 100px;
+                //         width: 100%;
+                //         margin-top: 1px;
+                //     }
+                // }
+
+                // .twitter-gallery {
+                //     &__item1 {
+                //         height: 337px;
+                //     }
+    
+                //     &__item2 {
+                        
+                //     }
+    
+                //     &__item3 {
+                        
+                //         margin-top: 1px;
+                //     }
+                // }
+                    
+            }
         }
     }
 }
+
+// .preview-twitter--media {
+//     border-radius: 5px;
+//     border: 1px solid rgba(0,0,0,0.1);
+//     margin: 10px 0;
+//     overflow: hidden;
+//     // background-position: center;
+//     // background-repeat: no-repeat;
+//     // background-size: cover;
+//     line-height: 0px;
+//     // display: inline-block;
+
+//     .preview-twitter--image {
+//         max-height: 504px;
+//         max-width: 504px;
+//         transition: height .5s;
+
+//         img {
+//             width: 420px;
+//             border-radius: 5px;
+//         }
+//     }
+
+//     .preview-twitter--album {
+//         max-height: 379.5px;
+//         border: 3px solid red;
+//         // margin-top: 10px;
+        
+//         &.preview-twitter--gallery {
+//             display: flex;
+
+//             &--2 {
+//                 max-height: 253px;
+//                 font-size: 0;
+    
+//                 .preview-twitter--gallery {
+//                     &:first-child {
+//                         margin-right: 1px;
+//                     }
+//                     &__item {
+//                         background-size: cover;
+//                     }
+//                     &__item1 {
+//                         img {
+//                             height: 210px;
+//                         }
+//                     }
+//                 }
+    
+//             }
+//         }    
+//     }
+
+    
+// }
+
+
 
 .preview-twitter--actions {
     cursor: pointer;
