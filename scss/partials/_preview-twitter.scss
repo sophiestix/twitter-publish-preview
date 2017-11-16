@@ -249,12 +249,8 @@ $gallery-gutter: 5px;
                     }
 
                     &__item3 {
-                        // width: 33.3%;
-                        // position: absolute;
-                        // top: -41px;
                         top: 50%;
                         bottom: 0;
-                        // left: 50%;
                         right: 0;
                         margin-bottom: 0;
                         margin-right: 0;
@@ -264,52 +260,7 @@ $gallery-gutter: 5px;
                     
                 }
 
-                // -webkit-column-count: 2;
-                // -moz-column-count: 2;
-                // column-count: 2;
-                // -webkit-column-gap: 80px;
-                // -moz-column-gap: 80px;
-                // column-gap: 80px;
-                // margin-right: -80px;
                 
-
-                // & > div:nth-child(n+2) {
-                //     margin-top: 1px;
-                // }
-
-                // .twitter-gallery {
-                //     &__item1 {
-                //         height: 337px;
-                //         width: 66.7%;
-                //     }
-    
-                //     &__item2 {
-                //         height: 100;
-                //         width: 100%;
-                //     }
-    
-                //     &__item3 {
-                //         height: 100px;
-                //         width: 100%;
-                //         margin-top: 1px;
-                //     }
-                // }
-
-                // .twitter-gallery {
-                //     &__item1 {
-                //         height: 337px;
-                //     }
-    
-                //     &__item2 {
-                        
-                //     }
-    
-                //     &__item3 {
-                        
-                //         margin-top: 1px;
-                //     }
-                // }
-                    
             }
         }
     }
