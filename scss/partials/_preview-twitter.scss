@@ -214,9 +214,9 @@ $gallery-gutter: 5px;
             }
 
             &--3 {
-                display: flex;
+                // display: flex;
                 height: 280px;
-                vertical-align: top;
+                // vertical-align: top;
                 position: relative;
 
                 .twitter-gallery {
@@ -231,19 +231,19 @@ $gallery-gutter: 5px;
                     &__item1 {
                         height: 100%;
                         width: 66.7%;
-                        top: 0;
-                        bottom: 0;
-                        margin-top: 0;
-                        margin-bottom: 0;
-                        margin-left: 0;
+                        // top: 0;
+                        // bottom: 0;
+                        margin-top: 0 !important;
+                        margin-bottom: 0 !important;
+                        margin-left: 0 !important;
                     }
 
                     &__item2 {
                         top: 0;
                         bottom: 50%;
                         right: 0;
-                        margin-top: 0;
-                        margin-right: 0;
+                        margin-top: 0 !important;
+                        margin-right: 0 !important;
                         width: calc(100% / 3 - 1px);
                         height: 50%;
                     }
@@ -252,15 +252,80 @@ $gallery-gutter: 5px;
                         top: 50%;
                         bottom: 0;
                         right: 0;
-                        margin-bottom: 0;
-                        margin-right: 0;
+                        margin-bottom: 0 !important;
+                        margin-right: 0 !important;
                         width: calc(100% /3 - 1px);
                         height: 50%;
                     }
-                    
                 }
+            }
 
-                
+            &--4 {
+                height: 379px;
+                position: relative;
+
+                .twitter-gallery {
+                    position: relative;
+                    height: 100%;
+                    width: 100%;
+
+                    &__item {
+                        position: absolute;
+                        margin: 1px;
+                    }
+
+                    &__item1 {
+                        height: 100%;
+                        width: 75%;
+                        top: 0;
+                        bottom: 0;
+                        left: 0;
+                        // right: 50%;
+                        margin-top: 0 !important;
+                        margin-left: 0 !important;
+                        margin-bottom: 0 !important;
+                        
+                    }
+
+                    &__item2 {
+                        width: calc(100% / 4 - 1px);
+                        height: calc(100% / 3 - 1px);
+                        top: 0;
+                        bottom: 66.77%;
+                        // left: 50%;
+                        right: 0;
+                        margin-top: 0 !important;
+                        margin-left: 0 !important;
+                        margin-right: 0 !important;
+                        // margin-bottom: 0 !important;
+                    }
+
+                    &__item3 {
+                        width: calc(100% / 4 - 1px);
+                        height: calc(100% / 3);
+                        top: 33.33%;
+                        bottom: 33.33%;
+                        // left: 0;
+                        right: 0;
+                        margin-top: 0 !important;
+                        margin-left: 0 !important;
+                        margin-right: 0 !important;
+                        margin-bottom: 0 !important;
+                    }
+
+                    &__item4 {
+                        width: calc(100% / 4 - 1px);
+                        height: calc(100% / 3 - 1px);
+                        top: 66.77%;
+                        bottom: 0;
+                        // left: 50%;
+                        right: 0;
+                        // margin-top: 0 !important;
+                        margin-left: 0 !important;
+                        margin-right: 0 !important;
+                        margin-bottom: 0 !important;
+                    }
+                }
             }
         }
     }
