@@ -214,9 +214,7 @@ $gallery-gutter: 5px;
             }
 
             &--3 {
-                // display: flex;
                 height: 280px;
-                // vertical-align: top;
                 position: relative;
 
                 .twitter-gallery {
@@ -226,36 +224,28 @@ $gallery-gutter: 5px;
                     
                     &__item {
                         position: absolute;
-                        margin: 1px;
                     }
                     &__item1 {
-                        height: 100%;
                         width: 66.7%;
-                        // top: 0;
-                        // bottom: 0;
-                        margin-top: 0 !important;
-                        margin-bottom: 0 !important;
-                        margin-left: 0 !important;
+                        height: 100%;
+                        margin: 0 1px 0 0;
                     }
 
                     &__item2 {
+                        width: calc(100% / 3 - 1px);
+                        height: 50%;
                         top: 0;
                         bottom: 50%;
                         right: 0;
-                        margin-top: 0 !important;
-                        margin-right: 0 !important;
-                        width: calc(100% / 3 - 1px);
-                        height: 50%;
+                        margin: 0 0 1px 0;
                     }
 
                     &__item3 {
+                        width: calc(100% /3 - 1px);
+                        height: 50%;
                         top: 50%;
                         bottom: 0;
                         right: 0;
-                        margin-bottom: 0 !important;
-                        margin-right: 0 !important;
-                        width: calc(100% /3 - 1px);
-                        height: 50%;
                     }
                 }
             }
@@ -275,16 +265,12 @@ $gallery-gutter: 5px;
                     }
 
                     &__item1 {
-                        height: 100%;
                         width: 75%;
+                        height: 100%;
                         top: 0;
                         bottom: 0;
                         left: 0;
-                        // right: 50%;
-                        margin-top: 0 !important;
-                        margin-left: 0 !important;
-                        margin-bottom: 0 !important;
-                        
+                        margin: 0 1px 0 0;
                     }
 
                     &__item2 {
@@ -292,12 +278,8 @@ $gallery-gutter: 5px;
                         height: calc(100% / 3 - 1px);
                         top: 0;
                         bottom: 66.77%;
-                        // left: 50%;
                         right: 0;
-                        margin-top: 0 !important;
-                        margin-left: 0 !important;
-                        margin-right: 0 !important;
-                        // margin-bottom: 0 !important;
+                        margin: 0 0 1px 0;
                     }
 
                     &__item3 {
@@ -305,12 +287,8 @@ $gallery-gutter: 5px;
                         height: calc(100% / 3);
                         top: 33.33%;
                         bottom: 33.33%;
-                        // left: 0;
                         right: 0;
-                        margin-top: 0 !important;
-                        margin-left: 0 !important;
-                        margin-right: 0 !important;
-                        margin-bottom: 0 !important;
+                        margin: 0;
                     }
 
                     &__item4 {
@@ -318,74 +296,14 @@ $gallery-gutter: 5px;
                         height: calc(100% / 3 - 1px);
                         top: 66.77%;
                         bottom: 0;
-                        // left: 50%;
                         right: 0;
-                        // margin-top: 0 !important;
-                        margin-left: 0 !important;
-                        margin-right: 0 !important;
-                        margin-bottom: 0 !important;
+                        margin: 1px 0 0 0;
                     }
                 }
             }
         }
     }
 }
-
-// .preview-twitter--media {
-//     border-radius: 5px;
-//     border: 1px solid rgba(0,0,0,0.1);
-//     margin: 10px 0;
-//     overflow: hidden;
-//     // background-position: center;
-//     // background-repeat: no-repeat;
-//     // background-size: cover;
-//     line-height: 0px;
-//     // display: inline-block;
-
-//     .preview-twitter--image {
-//         max-height: 504px;
-//         max-width: 504px;
-//         transition: height .5s;
-
-//         img {
-//             width: 420px;
-//             border-radius: 5px;
-//         }
-//     }
-
-//     .preview-twitter--album {
-//         max-height: 379.5px;
-//         border: 3px solid red;
-//         // margin-top: 10px;
-        
-//         &.preview-twitter--gallery {
-//             display: flex;
-
-//             &--2 {
-//                 max-height: 253px;
-//                 font-size: 0;
-    
-//                 .preview-twitter--gallery {
-//                     &:first-child {
-//                         margin-right: 1px;
-//                     }
-//                     &__item {
-//                         background-size: cover;
-//                     }
-//                     &__item1 {
-//                         img {
-//                             height: 210px;
-//                         }
-//                     }
-//                 }
-    
-//             }
-//         }    
-//     }
-
-    
-// }
-
 
 
 .preview-twitter--actions {
