@@ -137,7 +137,6 @@ h2 {
       .preview-twitter--media .twitter-album .twitter-gallery .twitter-gallery__item:first-child {
         margin-right: 1px; }
       .preview-twitter--mobile .preview-twitter--media .twitter-album .twitter-gallery .twitter-gallery__item {
-        width: auto;
         max-height: 120px;
         background-position: bottom; }
     .preview-twitter--media .twitter-album .twitter-gallery--1 {

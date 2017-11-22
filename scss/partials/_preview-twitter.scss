@@ -194,67 +194,29 @@ $gallery-gutter: 5px;
         .twitter-gallery {
 
             .twitter-gallery__item {
-                // width: 100%;
-                // height: 200px;
                 max-height: 420px;
                 background-size: cover;
                 background-repeat: no-repeat;
                 background-position: center;
-                // display: inline-block;
                 &:first-child {
                     margin-right: 1px;
                 }
 
                 .preview-twitter--mobile & {
-                    width: auto;
+                    // width: auto;
                     max-height: 120px;
                     background-position: bottom;
-                    // height: 110px;
-                    // top: -126px;
                 }
             }
-
-            // &--1 {
-            //     .twitter-gallery__item1 {
-            //         width: 420px;
-            //         height: auto;
-            //         // align-self: bottom;
-            //         position: relative;
-            //         // top: -116px;
-                    
-            //     }
-
-            //     .preview-twitter--mobile & {
-            //         img {
-            //             top: -10px;
-            //         }
-                    
-            //     }
-            // }
 
             &--1 {
                 width: 100%;
                 height: 420px;
-                // width: 420px;
-                // max-height: 200px;
-                // max-height: 420px;
-                // height: auto;
                 .twitter-gallery__item {
                     width: 100%;
                     height: 100%;
                     margin: 0 !important;
-                    // align-self: bottom;
-                    // position: relative;
-                    // top: -116px;
-                    
                 }
-
-                // .preview-twitter--mobile & {
-                //     img {
-                //         top: -10px;
-                //     }
-                    
-                // }
             }
 
             // &--2 {
@@ -301,23 +263,7 @@ $gallery-gutter: 5px;
                     &__item2 {
                         right: 0;
                     }
-    
-                    .preview-twitter--mobile & {
-                        // width: 100%;
-                        // height: 100%;
-                        // align-items: flex-end;
-                        // background-position: bottom;
-    
-                        .twitter-gallery {
-                            &--item {
-                                // width: 50%;
-                                // background-position: bottom;
-                            }
-                        }
-                    }
                 }
-
-                
             }
 
             &--3 {
