@@ -137,7 +137,7 @@ $gallery-gutter: 5px;
 
     > .preview-twitter__header-list-item {
         display: inline;
-        margin-bottom: 0;
+        // margin-bottom: 0;
     }
 }
 
@@ -192,18 +192,21 @@ $gallery-gutter: 5px;
         }
 
         .twitter-gallery {
+            position: relative;
 
             .twitter-gallery__item {
                 max-height: 420px;
                 background-size: cover;
                 background-repeat: no-repeat;
                 background-position: center;
-                &:first-child {
-                    margin-right: 1px;
-                }
+                margin: 0 !important;
+                position: absolute;
+                // &:first-child {
+                //     margin-right: 1px;
+                // }
 
                 .preview-twitter--mobile & {
-                    // width: auto;
+                    width: auto;
                     max-height: 120px;
                     background-position: bottom;
                 }
@@ -212,24 +215,19 @@ $gallery-gutter: 5px;
             &--1 {
                 width: 100%;
                 height: 420px;
+
                 .twitter-gallery__item {
                     width: 100%;
                     height: 100%;
-                    margin: 0 !important;
+                    position: relative;
                 }
             }
 
             &--2 {
                 height: 200px;
-                position: relative;
 
                 .twitter-gallery {
-                    width: 100%;
-                    height: 100%;
-                    position: relative;
-                    
                     &__item {
-                        position: absolute;
                         width: calc(100% /2 - 0.5px);
                         height: 100%;
                     }
@@ -240,52 +238,38 @@ $gallery-gutter: 5px;
                 }
 
                 .preview-twitter--mobile & {
-                    .twitter-gallery {
-                        &__item {
-                            width: calc(100% /2 - 1.5px);
-                        }
+                    .twitter-gallery__item {
+                        width: calc(100% /2 - 1.5px);
                     }
                 }
             }
 
             &--3 {
                 height: 280px;
-                position: relative;
 
                 .twitter-gallery {
-                    position: relative;
-                    height: 100%;
-                    width: 100%;
-                    
-                    &__item {
-                        position: absolute;
-                    }
                     &__item1 {
                         width: 66.7%;
                         height: 100%;
                         left: 0;
-                        // margin: 0 1px 0 0;
+                    }
+
+                    &__item2, &__item3 {
+                        width: calc(100% / 3 - 1px);
+                        height: calc(100% / 2 - 0.5px);
                     }
 
                     &__item2 {
-                        width: calc(100% / 3 - 1px);
-                        height: calc(100% / 2 - 0.5px);
                         top: 0;
-                        // bottom: 50%;
                         right: 0;
-                        // margin: 0 0 1px 0;
                     }
 
                     &__item3 {
-                        width: calc(100% / 3 - 1px);
-                        height: calc(100% / 2 - 0.5px);
-                        // top: 50%;
                         bottom: 0;
                         right: 0;
                     }
-
-                    
                 }
+
                 .preview-twitter--mobile & {
                     height: 120px;
 
@@ -295,62 +279,42 @@ $gallery-gutter: 5px;
                             height: 100%;
                         }
     
-                        &__item2, &__item3{
+                        &__item2, &__item3 {
                             height: calc(100% /2 - 1.5px);
                         }
                     }
-                    
                 }
             }
 
             &--4 {
                 height: 329px;
-                position: relative;
 
                 .twitter-gallery {
-                    position: relative;
-                    height: 100%;
-                    width: 100%;
-
-                    &__item {
-                        position: absolute;
-                        margin: 1px;
-                    }
-
                     &__item1 {
                         width: 75%;
                         height: 100%;
                         top: 0;
-                        bottom: 0;
                         left: 0;
-                        margin: 0 1px 0 0;
+                    }
+
+                    &__item2, &__item3, &__item4 {
+                        width: calc(100% / 4 - 1px);
+                        height: calc(100% / 3 - 0.5px);
                     }
 
                     &__item2 {
-                        width: calc(100% / 4 - 1px);
-                        height: calc(100% / 3);
                         top: 0;
-                        bottom: calc(100% / 3 * 2);
                         right: 0;
-                        margin: 0 0 1px 0;
                     }
 
                     &__item3 {
-                        width: calc(100% / 4 - 1px);
-                        height: calc(100% / 3);
                         top: calc(100% / 3);
-                        // bottom: 33.33%;
                         right: 0;
-                        margin: 0;
                     }
 
                     &__item4 {
-                        width: calc(100% / 4 - 1px);
-                        height: calc(100% / 3);
-                        top: calc(100% / 3 * 2);
                         bottom: 0;
                         right: 0;
-                        margin: 1px 0 0 0;
                     }
                 }
 
@@ -366,7 +330,6 @@ $gallery-gutter: 5px;
 
                         &__item2 {
                             right: 0;
-                            // margin: 0 0 0 1.5px;
                         }
 
                         &__item3 {
@@ -398,16 +361,10 @@ $gallery-gutter: 5px;
     }
 
     .preview-twitter--mobile & {
-        // padding-right: 19px;
         width: 23%;
 
         img {
             height: 12px;
         }
     }
-
-    // & img:hover {
-    //     cursor: inherit;
-    //     stroke: $twitter-blue;
-    // }
 }
