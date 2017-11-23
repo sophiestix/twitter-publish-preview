@@ -356,14 +356,14 @@ $gallery-gutter: 5px;
     width: 18%;
     display: inline-block;
 
-    img {
+    svg {
         height: 13px;
     }
 
     .preview-twitter--mobile & {
         width: 23%;
 
-        img {
+        svg {
             height: 12px;
         }
     }

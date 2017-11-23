@@ -219,11 +219,11 @@ h2 {
   cursor: pointer;
   width: 18%;
   display: inline-block; }
-  .preview-twitter--actions img {
+  .preview-twitter--actions svg {
     height: 13px; }
   .preview-twitter--mobile .preview-twitter--actions {
     width: 23%; }
-    .preview-twitter--mobile .preview-twitter--actions img {
+    .preview-twitter--mobile .preview-twitter--actions svg {
       height: 12px; }
 
 /*# sourceMappingURL=index.css.map */
